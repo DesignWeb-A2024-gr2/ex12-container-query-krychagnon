@@ -1,0 +1,79 @@
+/* Container Queries */
+#contenu_droite
+{
+    container-type: inline-size;
+    container-name: droite;
+}
+
+#contenu_gauche
+{
+    container-type: inline-size;
+    container-name: gauche;
+}
+
+#contenu_principal
+{
+    container-type: inline-size;
+    container-name: principal
+}
+
+.carte
+{
+    container-type: inline-size;
+    container-name: carte
+}
+
+@container (width > 450px)
+{
+    h3
+    {
+        font-size: 2em;
+    }
+}
+
+@container (400px < width < 500px)
+{
+    h3
+    {
+        display: inline-block;
+        text-align: left;
+        font-weight: 45cqmin;
+        vertical-align: top;
+    }
+    img
+    {
+        font-size: 50cqmin;
+    }
+}
+
+@container gauche (width < 425px)
+{
+   p
+   {
+        display: none;
+   } 
+}
+
+@container droite (width < 425px)
+{
+   p
+   {
+        display: none;
+   } 
+}
+
+@media screen and (width <= 1450px)
+{
+    #contenu_gauche
+    {
+        display: none;
+    }
+}
+
+@media screen and (width <= 950px)
+{
+    #contenu_droite
+    {
+        display: none;
+    }
+}
