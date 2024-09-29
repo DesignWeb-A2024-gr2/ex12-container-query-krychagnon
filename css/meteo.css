@@ -1,0 +1,76 @@
+/* Variables */
+:root
+{
+    --soleil:true;
+    --pnuageux:true;
+    --pluie:true;
+    --neige:true;
+}
+
+/* Style container-list */
+.container-list
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    border: 2px solid black;
+    margin: 20px;
+}
+
+/* Style cards */
+.container-card
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    border: 1px solid black;
+    margin: 10px;
+    width: 250px;
+    height: 250px;
+
+    padding: 10px;
+    z-index: 1;
+
+}
+#dimanche
+{
+    container: inline-size;
+    container-name: dim;
+    background-color: var(--pnuageux);
+}
+
+.symbole
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    z-index: 2;
+}
+
+.temps
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    object-fit: cover;
+}
+
+/* Style intérieur cartes */
+
+/* Style container */
+@container style(--pnuageux:true) 
+{
+    #dimanche
+    {
+      background: linear-gradient(-30deg, rgb(9, 161, 211), orange);
+    }
+    
+    #dimanche::after 
+    {
+      content: url(<data-uri-for-demo-brevity>);
+      background: blue;
+    }
+  }
+
