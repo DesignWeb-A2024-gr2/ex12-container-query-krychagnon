@@ -1,11 +1,3 @@
-/* Variables */
-:root
-{
-    --soleil:true;
-    --pnuageux:true;
-    --pluie:true;
-    --neige:true;
-}
 
 /* Style container-list */
 .container-list
@@ -16,6 +8,7 @@
 
     border: 2px solid black;
     margin: 20px;
+    padding: 10px;
 }
 
 /* Style cards */
@@ -26,21 +19,16 @@
     justify-content: space-around;
 
     border: 1px solid black;
+    /* background: red; */
     margin: 10px;
     width: 250px;
     height: 250px;
-
-    padding: 10px;
     z-index: 1;
 
-}
-#dimanche
-{
     container: inline-size;
-    container-name: dim;
-    background-color: var(--pnuageux);
-}
+    container-name: backStyle;
 
+}
 .symbole
 {
     display: flex;
@@ -60,17 +48,17 @@
 /* Style intérieur cartes */
 
 /* Style container */
-@container style(--pnuageux:true) 
+@container style(--pNuageux:true) 
 {
-    #dimanche
+    .weather-card
     {
-      background: linear-gradient(-30deg, rgb(9, 161, 211), orange);
+        background-color: orange;
     }
     
-    #dimanche::after 
+    .container-card::after 
     {
       content: url(<data-uri-for-demo-brevity>);
       background: blue;
     }
-  }
+}
 
